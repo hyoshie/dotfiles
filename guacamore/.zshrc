@@ -1,7 +1,7 @@
 # Load Homebrew config script
-source $HOME/.brewconfig.zsh
+# source $HOME/.brewconfig.zsh
 
-# alias
+# Alias
 alias ll='ls -l'
 alias ls='exa'
 alias cat='bat'
@@ -14,12 +14,18 @@ alias m='make'
 alias mc='make clean'
 alias mfc='make fclean'
 alias mb='make bonus'
+alias ga='git add .'
+alias gcm='git commit -m'
+alias gp='git push'
+alias grep='grep --color=auto'
 
-# config
+# Config
 autoload -U compinit
 compinit
 setopt auto_cd
 setopt auto_pushd
 setopt list_packed
-#setopt correct
+
+# Histroy
 setopt hist_ignore_dups
+setopt hist_ignore_all_dups
