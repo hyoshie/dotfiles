@@ -1,3 +1,92 @@
+"dein Scripts-----------------------------
+if &compatible
+	  set nocompatible               " Be iMproved
+endif
+
+"Required:
+set runtimepath+=/Users/hyoshie/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/Users/hyoshie/.cache/dein')
+
+" Let dein manage dein
+" Required:
+call dein#add('/Users/hyoshie/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+" Add or remove your plugins here like this:
+" call dein#add('Shougo/neosnippet.vim')
+" call dein#add('Shougo/neosnippet-snippets')
+
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('tomasr/molokai')
+
+"tree
+call dein#add('scrooloose/nerdtree')
+"commentout
+call dein#add('tpope/vim-commentary')
+"syntaxcheck
+call dein#add('scrooloose/syntastic')
+
+" deoplete
+" call dein#add('Shougo/deoplete.nvim')
+" if !has('nvim')
+"   call dein#add('roxma/nvim-yarp')
+"   call dein#add('roxma/vim-hug-neovim-rpc')
+" endif
+" let g:deoplete#enable_at_startup = 1
+" set shortmess+=c
+
+" inoremap <expr><BS> neocomplete#smart_close_popup()."<C-h>"
+" imap <expr><CR> neosnippet#expandable() ?  "<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "<C-y>" : "<CR>"
+" imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ?  "<Plug>(neosnippet_expand_or_jump)" : "<TAB>"
+
+
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
+
+map <C-m> :NERDTreeToggle<CR>
+
 " Display
 set number
 set cursorline
@@ -6,14 +95,13 @@ set cursorline
 set title
 set showmatch
 set matchtime=1
-set colorcolumn=80
+"set colorcolumn=80
 syntax on
-"colorscheme molokai
-"set t_Co=256
-set list listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:% " 不可視文字の表示
+colorscheme molokai
+
 
 " Indent
-set autoindent " 改行時に前の行のインデントを継続する
+set autoindent
 set smartindent
 set cindent
 set tabstop=4
@@ -21,14 +109,14 @@ set shiftwidth=4
 
 "Key Mapping
 inoremap <silent> jk <ESC>
-map <Enter> o<ESC>
+noremap Enter o<ESC>
 let mapleader = "\<space>"
 nnoremap <Leader>a :echo "Hello"<CR>
 nnoremap <Leader>z :noh<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader><Leader>q :tabo<CR>
-nnoremap <Leader>! :q!<CR>
+nnoremap <Leader>x :q!<CR>
 nnoremap <Leader>h ^
 nnoremap <Leader>l $
 nnoremap <Leader>m %
@@ -37,83 +125,10 @@ nnoremap n nzz
 nnoremap N Nzz
 
 " Search
-set ignorecase " 検索で大文字小文字を区別しない
-set incsearch " highlight before entero
+set ignorecase
+set incsearch
 
 " Others
 set noswapfile
-
-" Neobundle
-" Note: Skip initialization for vim-tiny or vim-small.
-"if 0 | endif
-
-"if &compatible
- "set nocompatible               " Be iMproved
-"endif
-
-"" Required:
-"set runtimepath+=~/.vim/bundle/neobundle.vim/
-
-"" Required:
-"call neobundle#begin(expand('~/.vim/bundle/'))
-
-"" Let NeoBundle manage NeoBundle
-"" Required:
-"NeoBundleFetch 'Shougo/neobundle.vim'
-
-"" My Bundles here:
-"" Refer to |:NeoBundle-examples|.
-"" Note: You don't set neobundle setting in .gvimrc!
-
-"" tree
-"NeoBundle 'scrooloose/nerdtree'
-
-"" snippet
-"if has('lua') && (( v:version == 703 && has('patch885')) || (v:version >= 704))
-  "NeoBundle 'Shougo/neocomplete'
-"else
-  "NeoBundle 'Shougo/neocomplcache'
-"endif
-
-"NeoBundle "Shougo/neosnippet"
-"NeoBundle "Shougo/neosnippet-snippets"
-"NeoBundle "honza/vim-snippets"
-"NeoBundle "rcmdnk/vim-octopress-snippets"
-
-"call neobundle#end()
-
-"" Required:
-"filetype plugin indent on
-
-"" If there are uninstalled bundles found on startup,
-"" this will conveniently prompt you to install them.
-"NeoBundleCheck
-
-
-"let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/snippets/'
-
-"" Plugin key-mappings.
-"" " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <TAB>     <Plug>(neosnippet_expand_or_jump)
-"smap <TAB>     <Plug>(neosnippet_expand_or_jump)
-"xmap <TAB>     <Plug>(neosnippet_expand_target)
-""imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-""smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-""xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-"" SuperTab like snippets behavior.
-"" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-""imap <expr><TAB>
-"" \ pumvisible() ? "\<C-n>" :
-"" \ neosnippet#expandable_or_jumpable() ?
-""\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-""smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-""<Plug>(neosnippet_expand_or_jump) : "\<TAB>"
-
-"" For conceal markers.
-"if has('conceal')
-  "set conceallevel=2 concealcursor=niv
-"endif
-
-"autocmd vimenter * NERDTree
-"map <C-m> :NERDTreeToggle<CR>
+set foldmethod=syntax
+set foldlevel=3
