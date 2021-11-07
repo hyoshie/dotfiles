@@ -4,9 +4,5 @@
 brew install readline
 brew install bat
 brew install exa
-mkdir -p ~/.vim/bundle
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-cd  ~/.vim
-mkdir colors
-git clone https://github.com/tomasr/molokai
-mv molokai/colors/molokai.vim ~/.vim/colors/
+brew install vim
+mkdir -p ~/.vim/dein
