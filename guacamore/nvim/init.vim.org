@@ -1,0 +1,86 @@
+"dein Scripts-----------------------------
+if &compatible
+	  set nocompatible               " Be iMproved
+endif
+
+"Path to DIR
+let s:dein_dir = expand('~/.vim/dein')
+let s:dein_repo_dir = s:dein_dir .  '/repos/github.com/Shougo/dein.vim'
+let s:toml_dir = expand('~/.config/nvim')
+
+" Required:
+execute 'set runtimepath^=' . s:dein_repo_dir
+
+" Required:
+if dein#load_state(s:dein_dir)
+	call dein#begin(s:dein_dir)
+
+	call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
+	call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
+
+	" Required:
+	call dein#end()
+	call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+	call dein#install()
+endif
+
+"End dein Scripts-------------------------
+set number
+set cursorline
+set ruler
+set cursorline
+set title
+set showmatch
+set matchtime=1
+"set colorcolumn=80
+syntax on
+"colorscheme molokai
+set encoding=utf-8
+set fileencodings=utf-8
+set fileformats=unix,dos,mac
+
+lang en_US.UTF-8
+
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+
+
+" Indent
+set autoindent
+set smartindent
+set cindent
+set tabstop=4
+set shiftwidth=4 
+
+"Key Mapping
+inoremap <silent> jk <ESC>
+noremap Enter o<ESC>
+let mapleader = "\<space>"
+nnoremap <Leader>a :echo "Hello"<CR>
+nnoremap <Leader>z :noh<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader><Leader>q :tabo<CR>
+nnoremap <Leader>x :q!<CR>
+nnoremap <Leader>h ^
+nnoremap <Leader>l $
+nnoremap <Leader>m %
+nnoremap <Leader>t <C-w>t
+nnoremap n nzz
+nnoremap N Nzz
+
+" Search
+set ignorecase
+set incsearch
+
+" Others
+set noswapfile
+set foldmethod=syntax
+set foldlevel=3
