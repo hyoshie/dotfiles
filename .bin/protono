@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ALLTYPE="^char|^short|^int|^long|^size_t|^float|^double|^bool|^unsigned|^struct|^enum|^t_|^e_|^void"
+
+
+for file in $@
+do
+	egrep "$ALLTYPE" $file | sed 's/$/;/g' | sed 's/^int	/int		/g' | sed 's///g'
+done
+
+# egrep "$ALLTYPE" $1 | sed 's/$/;/g'
