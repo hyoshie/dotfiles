@@ -1,0 +1,4 @@
+#!/bin/bash
+
+yes | rm -r ~/.vim/dein/*
+sh ~/.vim/installer.sh ~/.vim/dein

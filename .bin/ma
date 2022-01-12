@@ -1,0 +1,3 @@
+#!/bin/bash
+
+make && ./$(grep NAME Makefile | head -n 1 | awk '{print $3}') $@

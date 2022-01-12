@@ -1,0 +1,38 @@
+#!/bin/bash
+
+FILE=$1
+FILE_USCORE=$(echo -n $1 | tr . _)
+if [ -f $1 ]; then
+	LINE_OF_PROT_BEGIN=$(grep -n "//prototype" $1 | cut -d : -f 1)
+fi
+
+function print_proto_declaration ()
+{
+	grep -h -A 1 -e '^void' -e '^char' -e '^int' -e '^long' -e '^long long' \
+		-e '^size_t' -e '^float' -e '^double' \
+		-e '^bool' -e '^struct' -e '^t_' *.c | \
+		grep -e ',$' -e ')$' -e ' $' | grep -v $'int\tmain' | \
+		sed 's/)$/);/g' | sed 's/int	/int		/g'
+}
+
+function print_except_proto ()
+{
+	head -n $(($LINE_OF_PROT_BEGIN)) $FILE
+}
+
+if [ -f $1 ]; then
+	print_except_proto > new.h
+	print_proto_declaration >> new.h
+	echo $'\n#endif' >> new.h
+	cp $1 tmp.h
+	cp new.h $1
+	rm new.h
+else
+	echo "#ifndef ${FILE_USCORE^^}" > $1
+	echo "# define ${FILE_USCORE^^}" >> $1
+	echo >> $1
+
+	print_proto_declaration >> $1
+
+	echo $'\n#endif' >> $1
+fi
