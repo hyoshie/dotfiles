@@ -119,13 +119,14 @@ hook_add = '''
 	" For conceal markers.
 	if has('conceal')
 	  set conceallevel=2 concealcursor=niv
-	let g:neosnippet#snippets_directory = '$HOME/.vim/snippets/'
+	let g:neosnippet#snippets_directory = '$HOME/dotfiles/.vim/snippets/'
 	endif
 '''
 on_i = 1
 on_ft = ['snippet']
 depends = ['neosnippet-snippets']
 
+	# let g:neosnippet#snippets_directory = '$HOME/.vim/snippets/'
 	# let g:neosnippet#disable_runtime_snippets  =  { 'c' : 1,  'cpp' : 1 }
 
 # hook_add = '''
