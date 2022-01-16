@@ -58,8 +58,8 @@ alias gpl='git pull'
 alias grep='grep --color=auto'
 alias gccw='gcc -Wall -Werror -Wextra'
 
-alias cs='nvim ~/.vim/snippets/c.snip'
-alias cps='nvim ~/.vim/snippets/cpp.snip'
+alias cs='nvim ~/dotfiles/.vim/snippets/c.snip'
+alias cps='nvim ~/dotfiles/.vim/snippets/cpp.snip'
 alias ct='cd ~/.vim/template/c/'
 
 #One or Two alias
@@ -227,4 +227,4 @@ export MAIL=hyoshie@student.42tokyo.jp
 export MANPATH="$HOME/.brew/Cellar/readline/8.1.1/share/man":
 export CPATH=$CPATH:$HOME/dotfiles/.include
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:$HOME/dotfiles/.include
-export CPATH="$HOME/.brew/opt/readline/include":
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/dotfiles/.include
