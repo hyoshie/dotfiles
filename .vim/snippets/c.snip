@@ -1,0 +1,400 @@
+snippet     write
+abbr        Systemcall : write
+    write(${1:STDOUT_FILENO}, ${2:buff}, ${3:nbyte});${0}
+
+snippet     read
+abbr        Systemcall : read
+    read(${1:fd}, ${2:buff}, ${3:nbyte});${0}
+
+snippet     strbig
+abbr        create string over INT_MAX
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+    #include <limits.h>
+
+    #define length (size_t)INT_MAX + 5
+
+    char* longstr;
+
+    char *strbig(void)
+    {
+        printf("creating long string...\n");
+        longstr = malloc(length);
+        memset(longstr, 'a', LENGTH - 2);
+        longstr[LENGTH - 2] = 'b';
+        longstr[LENGTH - 1] = '\0';
+        return (longstr);
+    }
+
+snippet     printf
+abbr        my_printf
+    printf("${1}\n"${2});${0}
+
+snippet     pd
+abbr        my_printf %d
+    printf("[${1}]%d\n", $1);${0}
+
+snippet     ps
+abbr        my_printf %s
+    printf("[${1}]%s\n", $1);${0}
+
+snippet     pz
+abbr        my_printf %zu
+    printf("[${1}]%zu\n", $1);${0}
+
+snippet     fline
+abbr        print filename and line
+	printf("[\x1b[32m%s\x1b[39m] line:\x1b[31m%d\x1b[39m\n", __FILE__, __LINE__);
+
+snippet     pass
+abbr        pass here
+    printf("[\x1b[32mPASS\x1b[39m]\n");
+
+snippet     ok
+abbr        good sign
+    printf("[\x1b[32mOK\x1b[39m]\n");
+
+snippet     ng
+abbr        bad sign
+    printf("[\x1b[31mNG\x1b[39m]\n");
+
+snippet     leak
+abbr        leak check using destructor
+    void	detect_leak(void)__attribute__((destructor));
+
+    void	detect_leak(void)
+    {
+            if (system("leaks -q ${1:a.out} > /dev/null"))
+                system("leaks -q $1");
+    }
+
+
+snippet     red
+abbr        red_color_printf
+    printf("\x1b[31m${1}\x1b[39m\n");${0}
+
+snippet     green
+abbr        green_color_printf
+    printf("\x1b[32m${1}\x1b[39m\n");${0}
+
+snippet     yellow
+abbr        yellow_color_printf
+    printf("\x1b[33m${1}\x1b[39m\n");${0}
+
+snippet     blue
+abbr        blue_color_printf
+    printf("\x1b[34m${1}\x1b[39m\n");${0}
+
+snippet     magenta
+abbr        magenta_color_printf
+    printf("\x1b[35m${1}\x1b[39m\n");${0}
+
+snippet     cyan
+abbr        cyan_color_printf
+    printf("\x1b[36m${1}\x1b[39m\n");${0}
+
+snippet    debug 
+abbr       debug_printf
+    printf("\x1b[36m##\x1b[39m%s\x1b[39m->%d(%s)\n", __FILE__, __LINE__, __func__);
+
+snippet    in 
+abbr       my include
+    #include <${1}>${0}
+
+snippet    fork 
+abbr       my fork
+    pid_t   pid;
+    pid_t   wpid;
+    int     status;
+
+    pid = fork();
+    if (pid == 0)
+    {
+        ${1}
+    }
+    else
+    {
+        wpid = wait(&status);
+    }
+
+snippet    main 
+abbr       main
+	int	main(void)
+    {
+		${0:TARGET}
+		return (0);
+	}
+
+snippet    cmain
+alias      cm
+abbr       include and main(args)
+    #include <all.h>
+
+	int	main(int argc, char **argv)
+    {
+		${0:TARGET}
+		return (0);
+	}
+
+snippet    cmain_void
+alias      cmv
+abbr       include and main(args)
+    #include <all.h>
+
+	int	main(int argc, char **argv)
+    {
+		${0:TARGET}
+		return (0);
+	}
+
+snippet    setlibc
+abbr       include libc and main
+    #include <libc.h>
+
+	int	main(void)
+    {
+		${0:TARGET}
+		return (0);
+	}
+
+snippet    stdout 
+abbr       stdout_macro
+    STDOUT_FILENO
+
+snippet    stderr 
+abbr       stderr_macro
+    STDERR_FILENO
+
+snippet    stdin 
+abbr       stdin_macro
+    STDIN_FILENO
+
+snippet     open
+abbr        Systemcall : open
+    open(${1:filepath}, ${2:O_WRONLY | O_CREAT | O_TRANC}, ${3:0666});${0}
+
+snippet    ronly 
+abbr       open option
+    O_RDONLY
+
+snippet    wonly 
+abbr       open option
+    O_WRONLY
+
+snippet    rwonly 
+abbr       open option
+    O_RDWR
+
+snippet    append 
+abbr       open option
+    O_APPEND
+
+snippet    execve 
+abbr       Systemcall : execve
+    execve(${1:filepath}, ${2:argv}, ${3:environ});${0}
+
+snippet    close 
+abbr       Systemcall : close
+    close(${1:fd});${0}
+
+snippet    dup2 
+abbr       Systemcall : dup2
+    dup2(${1:src_fd}, ${2:dest_fd});${0}
+
+snippet    dup 
+abbr       Systemcall : dup
+    dup2(${1:src_fd});${0}
+
+snippet    pipe 
+abbr       Systemcall : pipe
+    pipe(${1:pfd});${0}
+
+snippet    pipeif 
+abbr       Pipe with If
+    if (pipe(${1:pfd}) == -1) {
+        perror("pipe");
+        exit(EXIT_FAILURE);
+    }
+
+snippet    success 
+abbr       Success Macro
+    EXIT_SUCCESS
+
+snippet    failure 
+abbr       Failure Macro
+    EXIT_FAILURE
+
+snippet     exits
+abbr       Exit with SUCCESS
+    exit(EXIT_SUCCESS);
+
+snippet     exitf
+abbr       Exit with FAILURE
+    exit(EXIT_FAILURE);
+
+snippet     nl
+abbr       Newline
+    \n
+
+snippet     ifnob
+options     head
+abbr       If NoBrace
+    if (${1:condition})
+        ${2:ifcode}
+    else
+        ${3:elsecode}
+
+snippet     ifelseb
+options     head
+abbr       If with Brace
+    if (${1:condition})
+    {
+        ${2:ifcode}
+    }
+    else
+    {
+        ${3:elsecode}
+    }
+
+snippet     ifb
+options     head
+abbr       If with Brace
+    if (${1:condition})
+    {
+        ${2:ifcode}
+    }
+
+snippet     elseb
+options     head
+abbr       Else with Brace
+    else
+    {
+        ${3:elsecode}
+    }
+
+snippet     forb
+options     head
+abbr        For with Brace
+    for (${1:int} ${2:i} = ${3:0}; $2 < ${4}; $2++)
+    {
+        ${0:#:target}
+    }
+
+snippet     fornob
+options     head
+abbr        For with Brace
+    for (${1:int} ${2:i} = ${3:0}; $2 < ${4}; $2++)
+        ${0:#:target}
+
+snippet     forrb
+options     head
+abbr        Reverse For with Brace
+    for (int ${1:i} = ${2}; $1 >= 0; $1--)
+    {
+        ${0:#:TARGET}
+    }
+
+snippet     forrnob
+options     head
+abbr        Reverse For with Brace
+    for (int ${1:i} = ${2}; $1 >= 0; $1--)
+        ${0:#:TARGET}
+
+snippet     whileb
+options     head
+alias       wb
+abbr        While with Brace
+    while (${1:#:condition})
+    {
+        ${0:TARGET}
+    }
+
+snippet     whilenob
+options     head
+alias       wbn
+abbr        While No Brace
+    while (${1:#:condition})
+        ${0:TARGET}
+
+
+snippet     function
+options     head
+alias       func
+abbr        Function Prototype
+    ${1:void}	${2:Func_name}(${3:void})
+    {
+        ${4:Code}
+    }
+
+snippet     function_test
+options     head
+alias       funct
+abbr        Function Prototype
+    ${1:void}	test_${2:}(${3:void})
+    {
+        ${4:Code}
+    }
+
+snippet     fcall
+alias       call
+abbr        Calling project function
+    ${1:Func_name}(${2:Args});
+
+snippet    retp 
+abbr       return with parenthis
+    return (${1:0});${0}
+
+snippet    reto
+abbr       return ;
+    return ;
+
+#Declare Vars
+snippet    dint
+abbr       Declare Int Var;
+	int		${1:Var};${0}
+
+snippet    dchar
+abbr       Declare Car Var;
+	char	${1:Var};${0}
+
+snippet    dlong
+abbr       Declare Long Var;
+	long	${1:Var};${0}
+
+snippet    dllong
+abbr       Declare LLong Var;
+	long long	${1:Var};${0}
+
+snippet    dsizet
+abbr       Declare Size_t Var;
+	size_t	${1:Var};${0}
+
+snippet    dfloat
+abbr       Declare Float Var;
+	float	${1:Var};${0}
+
+snippet    ddouble
+abbr       Declare Double Var;
+	double	${1:Var};${0}
+
+snippet    dstruct
+abbr       Declare Struct Var;
+	t_${1:STRUCT}	${2:Var};${0}
+
+#FUNCTION REAL
+
+snippet     isa
+abbr        Like Ctype.h
+    bool	is${1:}(char c)
+    {
+        if (c == '${2:}')
+            return (true);
+        else
+            return (false);
+    }
+
+snippet     malloc
+abbr        Malloc42
+    (${1:char} *)malloc(sizeof($1) * ${2:NUM});${0}
+
