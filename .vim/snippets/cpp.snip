@@ -29,49 +29,65 @@ abbr        simple set
 
     int main(void)
     {
-		${0:TARGET}
-		return (0);
+        ${0:TARGET}
     }
 
-snippet     canonical form header
+snippet     header with canonical form
 alias       canh
 abbr        orthodox canonical form header
-	class ${1:CLASS_NAME}
-	{
-		private:
-				${0}
-		public:
-			$1();
-			~$1();
-			$1(const $1& other);
-			$1& operator=(const $1& other);
-	};
+    class ${1:CLASS_NAME}
+    {
+        private:
+                ${0}
+        public:
+            $1();
+            ~$1();
+            $1(const $1& other);
+            $1& operator=(const $1& other);
+    };
 
-snippet     canonical form source
+snippet     source with canonical form
 alias       cans
 abbr        orthodox canonical form source
- #include "${1:CLASS_NAME}"
+ #include "${1:CLASS_NAME}.hpp"
 
-	$1::$1()
-	{
-	}
+    $1::$1()
+    {
+    }
 
-	$1::~$1()
-	{
-	}
+    $1::~$1()
+    {
+    }
 
-	$1::$1(const $1& other)
-	{
-		*this = &other;
-	}
+    $1::$1(const $1& other)
+    {
+        *this = other;
+    }
 
-	$1& $1::operator=(const $1& other)
-	{
-		if (this != &other) {
+    $1& $1::operator=(const $1& other)
+    {
+        if (this != &other) {
         }
-		return *this;
-	}
+        return *this;
+    }
+
 snippet     filename
 alias       fname
-		`expand("%:r")`
+    `expand("%:r")`
+
+snippet     std::cout
+alias       co
+    std::cout
+
+snippet     std::endl
+alias       en
+    std::endl
+
+snippet     testheader
+alias       th
+    std::cout    <<    "-----TEST ${1:CONTENT}-----"    <<    std::endl;${0}
+
+snippet     std::string
+alias       str
+    std::endl
 

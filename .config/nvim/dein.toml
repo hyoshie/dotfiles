@@ -198,14 +198,13 @@ repo = 'kana/vim-smartchr'
 hook_add = '''
 	autocmd Filetype c,cpp	inoremap <expr> = smartchr#loop(' = ', ' == ', ' != ', '=')
 	autocmd Filetype c		inoremap <expr> < smartchr#loop(' < ', ' <= ', '<')
-	autocmd Filetype cpp	inoremap <expr> < smartchr#loop(' < ', ' << ', ' <= ', '<')
+	autocmd Filetype cpp	inoremap <expr> < smartchr#loop(' < ', '	<<	', ' <= ', '<')
 	autocmd Filetype c		inoremap <expr> > smartchr#loop(' > ', ' >= ', '>')
-	autocmd Filetype cpp	inoremap <expr> > smartchr#loop(' > ', ' >> ', ' >= ', '>')
+	autocmd Filetype cpp	inoremap <expr> > smartchr#loop(' > ', '	>>	', ' >= ', '>')
 	autocmd Filetype c,cpp	inoremap <expr> , smartchr#loop(', ', ',')
 	autocmd Filetype c,cpp	inoremap <expr> & smartchr#loop('&', ' && ')
-	autocmd Filetype c,cpp	inoremap <expr> . smartchr#loop('.', '->')
-	autocmd Filetype c,cpp	inoremap <expr> / smartchr#loop('/', '../', '../../', '../../../')
-	autocmd Filetype cpp	inoremap <expr> : smartchr#loop('::', ':')
+	autocmd Filetype c,cpp	inoremap <expr> . smartchr#loop('.', '->','..')
+	autocmd Filetype cpp	inoremap <expr> : smartchr#loop(':', '::')
 '''
 
 # [[plugins]]

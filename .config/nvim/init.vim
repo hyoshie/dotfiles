@@ -67,6 +67,7 @@ set cursorline
 set title
 set showmatch
 set matchtime=1
+hi MatchParen ctermbg=1
 " set relativenumber
 "set colorcolumn=80
 syntax on
@@ -111,7 +112,9 @@ nnoremap L $
 nnoremap <CR> A<CR><ESC>
 
 " auto close
-inoremap { {}<left><cr><esc><s-o>
+inoremap {j {}<left><CR><esc><s-o>
+inoremap {k {}<esc>i
+inoremap { {}<esc>i
 inoremap ( ()<esc>i
 inoremap [ []<esc>i
 inoremap " ""<esc>i
@@ -125,7 +128,9 @@ vnoremap <C-Down> "zx"zp`[V`]
 let mapleader = "\<space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>a :qa<CR>
 nnoremap <Leader>x :q!<CR>
+nnoremap <leader>c :!ctags -R<CR>
 vnoremap <leader>c gc<UP>p
 " nnoremap <Leader>m %
 nnoremap <Leader>hh :noh <CR>
@@ -150,7 +155,7 @@ nnoremap <leader>fa :Ag<CR>
 nnoremap <leader>fb :Buffers<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fh :History<CR>
-nnoremap <leader>t :Template 
+nnoremap <leader>t :retab!<CR>
 "Gtags
 nnoremap <leader>gf :Gtags -f %<CR>
 nnoremap <leader>gj :GtagsCursor<CR>
@@ -233,7 +238,7 @@ map <silent> [Tag]p :tabprevious<CR>
 "nerdtree exit
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-autocmd FileType c setlocal commentstring=//\ %s
+autocmd FileType c,cpp setlocal commentstring=//\ %s
 
 "template
 augroup templateGroup
@@ -244,10 +249,17 @@ autocmd BufNewFile *.h :%s/define/ define/g
 autocmd BufNewFile *.h :r !echo
 autocmd BufNewFile *.h :r !proto *.c
 augroup END
+
 aug space
 	au!
 		autocmd BufWritePre *.c,*.cpp,*.h,*.hpp :%s/\s\+$//e
 aug END
+
+" aug spacetotab
+" 	au!
+" 		autocmd BufWritePre *.c,*.cpp,*.h,*.hpp :12,$s/    /\t/g
+" aug END
+
 
 " quickfix: make modifyable qlist 
 function! OpenModifiableQF()
