@@ -66,3 +66,15 @@ function pynt() {
 	python -c "print('$1' * $2)"
 }
 
+function gensh() {
+	shellscript=$1
+	touch $shellscript
+	chmod 744 $shellscript
+	echo "#!/bin/bash" >> $shellscript
+	echo >> $shellscript
+	echo "echo hello!" >> $shellscript
+}
+
+function cprev() {
+	cp -r ~/review/utils/$1 mytest
+}
