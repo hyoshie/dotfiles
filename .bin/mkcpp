@@ -1,0 +1,10 @@
+#!/bin/bash
+
+TEMPLATE_DIR=~/project/cpp/template_ex00
+FILES="$TEMPLATE_DIR/Makefile $TEMPLATE_DIR/Color.hpp $TEMPLATE_DIR/main.cpp"
+
+for i in $(seq 0 $1); do
+	exercise_dir=ex0$i
+	mkdir $exercise_dir
+	cp $FILES $exercise_dir
+done

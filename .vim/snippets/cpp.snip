@@ -23,20 +23,28 @@ snippet     cpmain
 alias       cpm
 abbr        simple set
     #include <iostream>
-    #include <iomanip>
-    #include <mymacro>
-    using namespace std;
+    #include <fstream>
+    #include <string>
 
-    int main(void)
-    {
+    //Color
+    # define RED "\x1b[31m"
+    # define GREEN "\x1b[32m"
+    # define YELLOW "\x1b[33m"
+    # define BLUE "\x1b[34m"
+    # define MAGENTA "\x1b[35m"
+    # define CYAN "\x1b[36m"
+    # define RESET "\x1b[39m"
+
+    int main() {
+        ;
+        ;
         ${0:TARGET}
     }
 
 snippet     header with canonical form
 alias       canh
 abbr        orthodox canonical form header
-    class ${1:CLASS_NAME}
-    {
+    class ${1:CLASS_NAME} {
         private:
                 ${0}
         public:
@@ -51,21 +59,17 @@ alias       cans
 abbr        orthodox canonical form source
  #include "${1:CLASS_NAME}.hpp"
 
-    $1::$1()
-    {
+    $1::$1() {
     }
 
-    $1::~$1()
-    {
+    $1::~$1() {
     }
 
-    $1::$1(const $1& other)
-    {
+    $1::$1(const $1& other) {
         *this = other;
     }
 
-    $1& $1::operator=(const $1& other)
-    {
+    $1& $1::operator=(const $1& other) {
         if (this != &other) {
         }
         return *this;
@@ -73,11 +77,15 @@ abbr        orthodox canonical form source
 
 snippet     filename
 alias       fname
-    `expand("%:r")`
+    `expand("%")`
 
 snippet     std::cout
 alias       co
     std::cout
+
+snippet     standard out
+alias       out
+    std::cout   <<  ${0}  <<  std::endl;
 
 snippet     std::endl
 alias       en
@@ -87,7 +95,67 @@ snippet     testheader
 alias       th
     std::cout    <<    "-----TEST ${1:CONTENT}-----"    <<    std::endl;${0}
 
-snippet     std::string
-alias       str
-    std::endl
+snippet     getter in cpp
+alias       getc
+    const ${2}    ${1}::get${0}${3}() const {
+        return _$3;
+    }
+
+snippet     setter in cpp
+alias       setc
+    void    ${1}::set${0}${3}(const ${2} $3) {
+        this._$3 = $3;
+    }
+
+snippet     getter in hpp
+alias       geth
+    const ${1}    get${0}${2}() const;
+
+snippet     setter in hpp
+alias       seth
+    void    set${0}${2}(const ${1} $2);
+
+
+snippet     accesser in cpp
+alias       acc
+    const ${2}    ${1}::get${0}${3}() const {
+        return _$3;
+    }
+
+    void    ${1}::set${0}${3}(const ${2} $3) {
+        this._$3 = $3;
+    }
+
+snippet     accesser in hpp
+alias       ach
+    const ${1}    get${0}${2}() const;
+    void    set${0}${2}(const ${1} $2);
+
+# snippet     string class
+# alias       str
+#     std::string
+
+# snippet     string class(const)
+# alias       strc
+#     const std::string
+
+snippet     typedef string class
+alias       typestr
+    typedef std::string Str;
+
+snippet     castcpp
+alias       cast
+    <${0}>
+
+snippet     static_cast
+alias       stcast
+   static_cast<${1}>(${2})
+
+snippet     reinterpret_cast
+alias       recast
+   reinterpret_cast<${1}>(${2})
+
+snippet     dynamic_cast
+alias       dycast
+   dynamic_cast<${1}>(${2})
 
