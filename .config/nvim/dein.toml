@@ -72,6 +72,7 @@ hook_add = '''
 	let g:syntastic_check_on_open = 1
 	let g:syntastic_check_on_wq = 0
 '''
+	# let g:syntastic_cpp_include_dirs = ['/Users/hyoshie/project/cpp/05/yoguchi/ex00/inc/']
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
@@ -198,9 +199,9 @@ repo = 'kana/vim-smartchr'
 hook_add = '''
 	autocmd Filetype c,cpp	inoremap <expr> = smartchr#loop(' = ', ' == ', ' != ', '=')
 	autocmd Filetype c		inoremap <expr> < smartchr#loop(' < ', ' <= ', '<')
-	autocmd Filetype cpp	inoremap <expr> < smartchr#loop(' < ', '	<<	', ' <= ', '<')
+	autocmd Filetype cpp	inoremap <expr> < smartchr#loop(' < ', ' << ', ' <= ', '<')
 	autocmd Filetype c		inoremap <expr> > smartchr#loop(' > ', ' >= ', '>')
-	autocmd Filetype cpp	inoremap <expr> > smartchr#loop(' > ', '	>>	', ' >= ', '>')
+	autocmd Filetype cpp	inoremap <expr> > smartchr#loop(' > ', ' >> ', ' >= ', '>')
 	autocmd Filetype c,cpp	inoremap <expr> , smartchr#loop(', ', ',')
 	autocmd Filetype c,cpp	inoremap <expr> & smartchr#loop('&', ' && ')
 	autocmd Filetype c,cpp	inoremap <expr> . smartchr#loop('.', '->','..')
@@ -232,3 +233,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'lighttiger2505/gtags.vim'
+
+[[plugins]]
+repo = 'thinca/vim-localrc'

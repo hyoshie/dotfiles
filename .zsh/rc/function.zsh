@@ -78,3 +78,4 @@ function gensh() {
 function cprev() {
 	cp -r ~/review/utils/$1 mytest
 }
+

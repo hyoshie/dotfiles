@@ -161,10 +161,9 @@ nnoremap <leader>gf :Gtags -f %<CR>
 nnoremap <leader>gj :GtagsCursor<CR>
 nnoremap <leader>gd :<C-u>exe('Gtags '.expand('<cword>'))<CR>
 nnoremap <leader>gr :<C-u>exe('Gtags -r '.expand('<cword>'))<CR>
-"Leader key
-" noremap h <Nop>
-" noremap l <Nop>
-
+" buffer operation
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
 
 "vim-fugitive
 nnoremap <Leader>gc :Gread<CR>
@@ -269,3 +268,22 @@ function! OpenModifiableQF()
 endfunction
 
 autocmd QuickfixCmdPost vimgrep call OpenModifiableQF()
+
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.cpp,*.hpp setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+augroup END
+
+
+function! s:clang_format()
+  let now_line = line(".")
+  exec ":%! clang-format"
+  exec ":" . now_line
+endfunction
+
+if executable('clang-format')
+  augroup cpp_clang_format
+    autocmd!
+    autocmd BufWrite,FileWritePre,FileAppendPre *.[ch]pp call s:clang_format()
+  augroup END
+endif

@@ -1,5 +1,5 @@
 #Alias_Temporary
-alias go="cd ~/project/cpp/04"
+alias go="cd ~/project/cpp/06"
 
 #Alias
 alias ls="exa"
@@ -11,8 +11,12 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
 alias mkdir="mkdir -pv"
+alias tree="tree -C"
 alias comp="gcc -Wall -Wextra -Werror"
+alias diff="colordiff"
 alias dot="nvim $DOTFILE"
+alias cdbin="cd $DOTFILE/.bin"
+alias cddot="cd $DOTFILE"
 alias vz="nvim ~/.zshrc"
 alias vzd="nvim $ZSHRC"
 alias va="nvim $ZSHRC/alias.zsh"
