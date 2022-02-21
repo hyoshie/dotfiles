@@ -1,0 +1,25 @@
+Validating found git in: git
+Using git 2.25.1 from git
+> git rev-parse --git-dir
+Open repository: /home/user42/42tokyo/so_long/mine
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/so_long/mine/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :srcs/init_structs/init.c
+> git ls-files --stage -- /home/user42/42tokyo/so_long/mine/srcs/init_structs/init.c
+> git cat-file -s 7f3f59854cd3fb45358e3a5c2cefb29c20529f2a
+> git show --textconv :srcs/init_structs/texture.c
+> git ls-files --stage -- /home/user42/42tokyo/so_long/mine/srcs/init_structs/texture.c
+> git cat-file -s 1ee78f6c0b99aab164692f8ff4f42415574fc784
+> git check-ignore -v -z --stdin
+> git show --textconv :srcs/exit/exit.c
+> git ls-files --stage -- /home/user42/42tokyo/so_long/mine/srcs/exit/exit.c
+> git cat-file -s bf55ee2cda9396a46395b68bd0fcfcd081ceff56

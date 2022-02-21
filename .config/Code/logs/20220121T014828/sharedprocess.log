@@ -1,0 +1,11 @@
+[2022-01-21 01:48:30.728] [sharedprocess] [info] Starting worker process with pid 68408 (type: watcherServiceParcelSharedProcess, window: 1).
+[2022-01-21 01:49:06.440] [sharedprocess] [info] Installing extension: asvetliakov.vscode-neovim
+[2022-01-21 01:49:07.892] [sharedprocess] [info] Downloaded extension: asvetliakov.vscode-neovim /home/user42/dotfiles/.config/Code/CachedExtensionVSIXs/asvetliakov.vscode-neovim-0.0.83
+[2022-01-21 01:49:08.003] [sharedprocess] [info] Extracted extension to /home/user42/.vscode/extensions/.cda4f8c2-6a5a-416f-83ea-aa43f2c48844: asvetliakov.vscode-neovim
+[2022-01-21 01:49:08.010] [sharedprocess] [info] Renamed to /home/user42/.vscode/extensions/asvetliakov.vscode-neovim-0.0.83
+[2022-01-21 01:49:08.012] [sharedprocess] [info] Extracting completed. asvetliakov.vscode-neovim
+[2022-01-21 01:49:08.014] [sharedprocess] [info] Extension installed successfully: asvetliakov.vscode-neovim
+[2022-01-21 01:49:25.195] [sharedprocess] [info] Worker process with pid 68408 terminated normally (type: watcherServiceParcelSharedProcess, window: 1).
+[2022-01-21 01:49:26.008] [sharedprocess] [info] Starting worker process with pid 68513 (type: watcherServiceParcelSharedProcess, window: 1).
+[2022-01-21 01:49:41.578] [sharedprocess] [info] Worker process with pid 68513 terminated normally (type: watcherServiceParcelSharedProcess, window: 1).
+[2022-01-21 01:49:42.454] [sharedprocess] [info] Starting worker process with pid 68618 (type: watcherServiceParcelSharedProcess, window: 1).

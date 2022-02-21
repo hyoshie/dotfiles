@@ -1,0 +1,25 @@
+[2022-01-21 09:46:20.265] [main] [info] update#setState idle
+[2022-01-21 09:46:20.315] [main] [info] ExtensionHostStarterWorker created
+[2022-01-21 09:46:21.193] [main] [info] Starting extension host with pid 6426 (fork() took 16 ms).
+[2022-01-21 09:46:50.269] [main] [info] update#setState checking for updates
+[2022-01-21 09:46:50.362] [main] [info] update#setState idle
+[2022-01-21 10:14:27.548] [main] [info] Starting extension host with pid 9737 (fork() took 6 ms).
+[2022-01-21 10:17:51.545] [main] [info] Extension host with pid 9737 exited with code: 0, signal: null.
+[2022-01-21 10:21:23.089] [main] [info] Starting extension host with pid 10396 (fork() took 5 ms).
+[2022-01-21 10:46:50.360] [main] [info] update#setState checking for updates
+[2022-01-21 10:46:50.741] [main] [info] update#setState idle
+[2022-01-21 11:46:50.445] [main] [info] update#setState checking for updates
+[2022-01-21 11:46:50.825] [main] [info] update#setState idle
+[2022-01-21 11:58:49.636] [main] [info] Extension host with pid 10396 exited with code: 0, signal: null.
+[2022-01-21 12:46:50.531] [main] [info] update#setState checking for updates
+[2022-01-21 12:46:50.907] [main] [info] update#setState idle
+[2022-01-21 13:46:50.626] [main] [info] update#setState checking for updates
+[2022-01-21 13:46:51.017] [main] [info] update#setState idle
+[2022-01-21 14:46:50.723] [main] [info] update#setState checking for updates
+[2022-01-21 14:46:51.101] [main] [info] update#setState idle
+[2022-01-21 15:46:50.767] [main] [info] update#setState checking for updates
+[2022-01-21 15:46:51.142] [main] [info] update#setState idle
+[2022-01-21 16:46:50.863] [main] [info] update#setState checking for updates
+[2022-01-21 16:46:51.253] [main] [info] update#setState idle
+[2022-01-21 17:42:36.048] [main] [info] Waiting for extension host with pid 6426 to exit.
+[2022-01-21 17:42:36.392] [main] [info] Extension host with pid 6426 exited with code: 0, signal: null.

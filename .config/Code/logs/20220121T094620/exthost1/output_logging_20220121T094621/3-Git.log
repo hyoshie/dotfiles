@@ -1,0 +1,212 @@
+Validating found git in: git
+Using git 2.25.1 from git
+> git rev-parse --git-dir
+Open repository: /home/user42/42tokyo/review/mhira
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :map_validation.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_validation.c
+> git cat-file -s d0e2081035f040732362c688fb3780ecadf299cb
+> git show --textconv :map_valiidation_2.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_valiidation_2.c
+> git cat-file -s 14429d8f3f436891c7ffcbeb5b9cef12f73dc0b6
+> git show --textconv :map_validation.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_validation.c
+> git cat-file -s d0e2081035f040732362c688fb3780ecadf299cb
+> git show --textconv :map_reading.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_reading.c
+> git cat-file -s 85b9ba95a1ef0458c54e7bb3205348878f806efd
+> git show --textconv :map_validation.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_validation.c
+> git cat-file -s d0e2081035f040732362c688fb3780ecadf299cb
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/user42/42tokyo/review/mhira/map_validation.c
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n41 -- /home/user42/42tokyo/review/mhira/map_validation.c
+> git show --textconv :map_reading.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_reading.c
+> git cat-file -s 85b9ba95a1ef0458c54e7bb3205348878f806efd
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/user42/42tokyo/review/mhira/map_reading.c
+> git show --textconv :main.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/main.c
+> git cat-file -s 33c09097e60e8b04fb0e32d8b63d1f6123ddcf18
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_validation.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/main.c
+> git cat-file -s d0e2081035f040732362c688fb3780ecadf299cb
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git cat-file -s 33c09097e60e8b04fb0e32d8b63d1f6123ddcf18
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git show --textconv :map_validation.c
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git show --textconv :main.c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git show --textconv :args_validation.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/args_validation.c
+> git cat-file -s 6cde9b59cc90b289c2d471360cbf123207055713
+> git show --textconv :debug.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/debug.c
+> git cat-file -s 96ba94021133ec8f12a9ea5014a401c775323344
+> git show --textconv :main.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/main.c
+> git cat-file -s 33c09097e60e8b04fb0e32d8b63d1f6123ddcf18
+> git show --textconv :map_reading.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_reading.c
+> git cat-file -s 85b9ba95a1ef0458c54e7bb3205348878f806efd
+> git show --textconv :lib/mlx/mlx_init.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/lib/mlx/mlx_init.c
+> git cat-file -s c9d7463a42cf1df173e5331c5464202ca1e95746
+> git check-ignore -v -z --stdin
+> git show --textconv :map_reading.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_reading.c
+> git cat-file -s 85b9ba95a1ef0458c54e7bb3205348878f806efd
+> git check-ignore -v -z --stdin
+> git show --textconv :mapping_pixel.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/mapping_pixel.c
+> git cat-file -s 38bfcc4a0191ee6e10e5ba9aaa796686579e322c
+> git show --textconv :lib/mlx/mlx_put_image_to_window.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/lib/mlx/mlx_put_image_to_window.c
+> git cat-file -s 86ba3f4b3d67c12dc3067aac76bc8be11a2e8014
+> git show --textconv :mapping_pixel.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/mapping_pixel.c
+> git cat-file -s 38bfcc4a0191ee6e10e5ba9aaa796686579e322c
+> git show --textconv :map_reading.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_reading.c
+> git cat-file -s 85b9ba95a1ef0458c54e7bb3205348878f806efd
+> git show --textconv :map_valiidation_2.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_valiidation_2.c
+> git cat-file -s 14429d8f3f436891c7ffcbeb5b9cef12f73dc0b6
+> git show --textconv :player_algo.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/player_algo.c
+> git cat-file -s 9fbcc3123b5e4a9ccca5a2e08d5957f5ae10242f
+> git show --textconv :mapping_pixel.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/mapping_pixel.c
+> git cat-file -s 38bfcc4a0191ee6e10e5ba9aaa796686579e322c
+> git show --textconv :player_algo.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/player_algo.c
+> git cat-file -s 9fbcc3123b5e4a9ccca5a2e08d5957f5ae10242f
+> git show --textconv :mapping_pixel.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/mapping_pixel.c
+> git cat-file -s 38bfcc4a0191ee6e10e5ba9aaa796686579e322c
+> git show --textconv :player_algo.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/player_algo.c
+> git cat-file -s 9fbcc3123b5e4a9ccca5a2e08d5957f5ae10242f
+> git show --textconv :map_reading.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_reading.c
+> git cat-file -s 85b9ba95a1ef0458c54e7bb3205348878f806efd
+> git show --textconv :map_algo.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_algo.c
+> git cat-file -s b491c476d8a15954b771b9999b8724e08b9e461e
+> git show --textconv :error_handling.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/error_handling.c
+> git cat-file -s f5a02a3149cf220c3ffc9a1a0af2fe0c0c1d16bf
+> git show --textconv :main.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/main.c
+> git cat-file -s 33c09097e60e8b04fb0e32d8b63d1f6123ddcf18
+> git show --textconv :mapping_pixel.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/mapping_pixel.c
+> git cat-file -s 38bfcc4a0191ee6e10e5ba9aaa796686579e322c
+> git show --textconv :error_handling.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/error_handling.c
+> git cat-file -s f5a02a3149cf220c3ffc9a1a0af2fe0c0c1d16bf
+> git show --textconv :map_reading.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/map_reading.c
+> git cat-file -s 85b9ba95a1ef0458c54e7bb3205348878f806efd

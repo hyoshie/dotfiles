@@ -1,0 +1,3 @@
+[2022-01-21 01:57:12.612] [sharedprocess] [info] Starting worker process with pid 69273 (type: watcherServiceParcelSharedProcess, window: 1).
+[2022-01-21 01:57:30.522] [sharedprocess] [info] Worker process with pid 69273 terminated normally (type: watcherServiceParcelSharedProcess, window: 1).
+[2022-01-21 01:57:31.569] [sharedprocess] [info] Starting worker process with pid 69348 (type: watcherServiceParcelSharedProcess, window: 1).

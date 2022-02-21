@@ -1,0 +1,43 @@
+Validating found git in: git
+Using git 2.25.1 from git
+Opening repository for path='/home/user42/42tokyo/review' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+> git rev-parse --git-dir
+Open repository: /home/user42/42tokyo/review/mhira
+> git status -z -u
+Opening repository for path='/home/user42/42tokyo/review/so_long' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+> git symbolic-ref --short HEAD
+> git rev-parse --git-dir
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master
+Open repository: /home/user42/42tokyo/review/utils_review
+> git status -z -u
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/mhira/.git/refs/remotes/origin/master', is most likely packed.
+> git symbolic-ref --short HEAD
+> git config --get commit.template
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/main refs/remotes/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/user42/42tokyo/review/utils_review/.git/refs/remotes/origin/main', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :debug.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/debug.c
+> git cat-file -s 96ba94021133ec8f12a9ea5014a401c775323344
+> git show --textconv :debug.c
+> git ls-files --stage -- /home/user42/42tokyo/review/mhira/debug.c
+> git cat-file -s 96ba94021133ec8f12a9ea5014a401c775323344

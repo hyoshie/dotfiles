@@ -1,0 +1,9 @@
+[2022-02-15 12:20:40.723] [sharedprocess] [info] Starting worker process with pid 8047 (type: watcherServiceParcelSharedProcess, window: 1).
+[2022-02-15 12:20:43.424] [sharedprocess] [info] Installing extension: vscodevim.vim
+[2022-02-15 12:20:45.109] [sharedprocess] [info] Downloaded extension: vscodevim.vim /home/user42/dotfiles/.config/Code/CachedExtensionVSIXs/vscodevim.vim-1.22.1
+[2022-02-15 12:20:45.267] [sharedprocess] [info] Extracted extension to /home/user42/.vscode/extensions/.a5800d77-3d39-4e88-9f59-52800b2b10cc: vscodevim.vim
+[2022-02-15 12:20:45.274] [sharedprocess] [info] Renamed to /home/user42/.vscode/extensions/vscodevim.vim-1.22.1
+[2022-02-15 12:20:45.278] [sharedprocess] [info] Extracting completed. vscodevim.vim
+[2022-02-15 12:20:45.284] [sharedprocess] [info] Extension installed successfully: vscodevim.vim
+[2022-02-15 12:21:01.411] [sharedprocess] [info] Worker process with pid 8047 terminated normally (type: watcherServiceParcelSharedProcess, window: 1).
+[2022-02-15 12:21:02.343] [sharedprocess] [info] Starting worker process with pid 8273 (type: watcherServiceParcelSharedProcess, window: 1).

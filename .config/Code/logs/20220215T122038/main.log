@@ -1,0 +1,9 @@
+[2022-02-15 12:20:39.050] [main] [info] update#setState idle
+[2022-02-15 12:20:39.107] [main] [info] ExtensionHostStarterWorker created
+[2022-02-15 12:20:40.162] [main] [info] Starting extension host with pid 8019 (fork() took 7 ms).
+[2022-02-15 12:21:01.419] [main] [info] Extension host with pid 8019 exited with code: 0, signal: null.
+[2022-02-15 12:21:02.230] [main] [info] Starting extension host with pid 8261 (fork() took 4 ms).
+[2022-02-15 12:21:09.057] [main] [info] update#setState checking for updates
+[2022-02-15 12:21:09.060] [main] [info] update#setState available for download
+[2022-02-16 00:25:28.898] [main] [info] Waiting for extension host with pid 8261 to exit.
+[2022-02-16 00:25:29.283] [main] [info] Extension host with pid 8261 exited with code: 0, signal: null.
