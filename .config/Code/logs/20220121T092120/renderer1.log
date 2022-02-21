@@ -1,4 +1,0 @@
-[2022-01-21 09:21:22.621] [renderer1] [error] [Extension Host] (node:3031) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-(Use `code --trace-deprecation ...` to show where the warning was created)
-[2022-01-21 09:21:27.513] [renderer1] [error] [File Watcher (parcel)] Inotify limit reached (ENOSPC) (path: /home/user42)
-[2022-01-21 09:21:53.642] [renderer1] [error] ENOENT: no such file or directory, open '/home/user42/dotfiles/.config/Code/User/globalStorage/vscodevim.vim/.registers': Error: ENOENT: no such file or directory, open '/home/user42/dotfiles/.config/Code/User/globalStorage/vscodevim.vim/.registers'

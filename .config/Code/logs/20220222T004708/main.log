@@ -1,5 +1,0 @@
-[2022-02-22 00:47:08.534] [main] [info] update#setState idle
-[2022-02-22 00:47:08.580] [main] [info] ExtensionHostStarterWorker created
-[2022-02-22 00:47:09.571] [main] [info] Starting extension host with pid 3141 (fork() took 7 ms).
-[2022-02-22 00:47:10.869] [main] [info] Waiting for extension host with pid 3141 to exit.
-[2022-02-22 00:47:10.900] [main] [info] Extension host with pid 3141 exited with code: 0, signal: null.
