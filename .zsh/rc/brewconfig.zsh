@@ -5,7 +5,7 @@ if [ $(uname) = "Darwin" ]; then
 	export PATH=$HOME/.brew/bin:$PATH
 	export HOMEBREW=$HOME/.brew
 fi
-if [ $(uname)="Linux" ]; then
+if [ $(uname) = "Linux" ]; then
 	# export HOGE=hoge42tokyo
 	export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 	export HOMEBREW=/home/linuxbrew/.linuxbrew
