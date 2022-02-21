@@ -1,8 +1,8 @@
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export ZSHRC="$HOME/dotfiles/.zsh/rc/"
-export DOTFILE="$HOME/dotfiles/"
+export ZSHRC="$HOME/dotfiles/.zsh/rc"
+export DOTFILE="$HOME/dotfiles"
 
 source $ZSHRC/alias.zsh
 source $ZSHRC/brewconfig.zsh

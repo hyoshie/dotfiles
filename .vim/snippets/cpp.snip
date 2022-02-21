@@ -10,10 +10,6 @@
 #         ${0:target}
 #     }
 
-snippet     cout
-abbr        std::cout << << std::endl;
-    std::cout << ${1} << std::endl;
-
 snippet     uname
 alias       un
 abbr        using namespace
@@ -23,22 +19,22 @@ snippet     cpmain
 alias       cpm
 abbr        simple set
     #include <iostream>
-    #include <fstream>
-    #include <string>
+    ${1:TARGET}
 
     //Color
-    # define RED "\x1b[31m"
-    # define GREEN "\x1b[32m"
-    # define YELLOW "\x1b[33m"
-    # define BLUE "\x1b[34m"
-    # define MAGENTA "\x1b[35m"
-    # define CYAN "\x1b[36m"
-    # define RESET "\x1b[39m"
+    #define RED "\x1b[31m"
+    #define GREEN "\x1b[32m"
+    #define YELLOW "\x1b[33m"
+    #define BLUE "\x1b[34m"
+    #define MAGENTA "\x1b[35m"
+    #define CYAN "\x1b[36m"
+    #define RESET "\x1b[39m"
+
+    ${0}
 
     int main() {
         ;
         ;
-        ${0:TARGET}
     }
 
 snippet     header with canonical form
@@ -79,13 +75,41 @@ snippet     filename
 alias       fname
     `expand("%")`
 
+snippet     o_new_line
+alias       coen
+abbr        std::cout << std::endl;
+    std::cout << std::endl;
+
+snippet     o_new_line2
+alias       coen2
+abbr        std::cout << std::endl << std::endl;
+    std::cout << std::endl << std::endl;
+
+snippet     std::cin
+alias       cin
+    std::cin   >>
+
 snippet     std::cout
 alias       co
-    std::cout
+    std::cout   <<  
 
-snippet     standard out
+snippet     std::out
 alias       out
     std::cout   <<  ${0}  <<  std::endl;
+
+snippet     std::out_c
+alias       cout
+    std::cout   <<  ${0}  <<  std::endl;
+
+snippet     std::out_space
+alias       cos
+    std::cout   <<  ${0}  <<  " ";
+
+
+snippet     std_flush
+alias       flush
+    std::cout   <<  ${0}  <<  std::flush;
+
 
 snippet     std::endl
 alias       en
@@ -95,29 +119,29 @@ snippet     testheader
 alias       th
     std::cout    <<    "-----TEST ${1:CONTENT}-----"    <<    std::endl;${0}
 
-snippet     getter in cpp
-alias       getc
+snippet     my_getterc
+alias       mygetc
     const ${2}    ${1}::get${0}${3}() const {
         return _$3;
     }
 
-snippet     setter in cpp
-alias       setc
+snippet     my_setterc
+alias       mysetc
     void    ${1}::set${0}${3}(const ${2} $3) {
         this._$3 = $3;
     }
 
-snippet     getter in hpp
-alias       geth
+snippet     my_getterh
+alias       mygeth
     const ${1}    get${0}${2}() const;
 
-snippet     setter in hpp
-alias       seth
+snippet     my_setterh
+alias       myseth
     void    set${0}${2}(const ${1} $2);
 
 
-snippet     accesser in cpp
-alias       acc
+snippet     my_accesserc
+alias       myacc
     const ${2}    ${1}::get${0}${3}() const {
         return _$3;
     }
@@ -126,8 +150,8 @@ alias       acc
         this._$3 = $3;
     }
 
-snippet     accesser in hpp
-alias       ach
+snippet     my_accesserh
+alias       myach
     const ${1}    get${0}${2}() const;
     void    set${0}${2}(const ${1} $2);
 
@@ -153,9 +177,35 @@ alias       stcast
 
 snippet     reinterpret_cast
 alias       recast
+
    reinterpret_cast<${1}>(${2})
 
 snippet     dynamic_cast
 alias       dycast
    dynamic_cast<${1}>(${2})
 
+snippet     std::vector
+alias       vec
+   std::vector<${1}>    ${2};${0}
+
+
+snippet     if_1line
+alias       if1
+    if (${1:Condition})
+        ${2:Process}
+
+snippet     try_convenient
+alias       tryc
+    try {
+        ${1:Action}
+    } catch (const std::exception& e) {
+        std::cout   << e.what() <<  std::endl;
+    }
+
+
+snippet     test_function
+alias       test
+    void    test${1:Item}(const std::string &msg) {
+        std::cout << msg << std::endl;
+        ${0}
+    }

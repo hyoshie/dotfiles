@@ -144,8 +144,8 @@ cnoremap <C-l> ~/
 nnoremap <Leader>sf :%s;\<<C-R><C-W>\>;g<Left><Left>;
 nnoremap <leader>= gg=G
 nnoremap <leader>d :%bd<CR>
-nnoremap <leader>p :bprev<CR>
-nnoremap <leader>n :bnext<CR>
+" nnoremap <leader>p :bprev<CR>
+nnoremap <leader>n :set number!<CR>
 nnoremap <leader>oo :
 nnoremap <leader>oj :!
 nnoremap <leader>or :r !
@@ -246,7 +246,7 @@ autocmd BufNewFile *.h :Headerguard
 autocmd BufNewFile *.h :Stdheader
 autocmd BufNewFile *.h :%s/define/ define/g
 autocmd BufNewFile *.h :r !echo
-autocmd BufNewFile *.h :r !proto *.c
+" autocmd BufNewFile *.h :r !proto *.c
 augroup END
 
 aug space
@@ -285,5 +285,6 @@ if executable('clang-format')
   augroup cpp_clang_format
     autocmd!
     autocmd BufWrite,FileWritePre,FileAppendPre *.[ch]pp call s:clang_format()
+    " autocmd BufWrite,FileWritePre,FileAppendPre *.c,*.h call s:clang_format()
   augroup END
 endif
