@@ -288,3 +288,5 @@ if executable('clang-format')
     " autocmd BufWrite,FileWritePre,FileAppendPre *.c,*.h call s:clang_format()
   augroup END
 endif
+
+set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
