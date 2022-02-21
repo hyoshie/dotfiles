@@ -13,14 +13,16 @@ abbr        create string over INT_MAX
     #include <string.h>
     #include <limits.h>
 
-    #define length (size_t)INT_MAX + 5
+    #define LENGTH INT_MAX + 5L
 
-    char* longstr;
 
     char *strbig(void)
     {
         printf("creating long string...\n");
-        longstr = malloc(length);
+
+        char* longstr;
+
+        longstr = malloc(LENGTH);
         memset(longstr, 'a', LENGTH - 2);
         longstr[LENGTH - 2] = 'b';
         longstr[LENGTH - 1] = '\0';
@@ -118,43 +120,48 @@ abbr       my fork
         wpid = wait(&status);
     }
 
-snippet    main 
-abbr       main
-	int	main(void)
-    {
-		${0:TARGET}
-		return (0);
-	}
-
 snippet    cmain
 alias      cm
 abbr       include and main(args)
-    #include <all.h>
+    #include <libc.h>
+	${1}
+
+    //Color
+    # define RED "\x1b[31m"
+    # define GREEN "\x1b[32m"
+    # define YELLOW "\x1b[33m"
+    # define BLUE "\x1b[34m"
+    # define MAGENTA "\x1b[35m"
+    # define CYAN "\x1b[36m"
+    # define RESET "\x1b[39m"
+
+	${0:TARGET}
 
 	int	main(int argc, char **argv)
     {
-		${0:TARGET}
+        ;
 		return (0);
 	}
 
 snippet    cmain_void
 alias      cmv
 abbr       include and main(args)
-    #include <all.h>
+    #include <libc.h>
+
+    //Color
+    # define RED "\x1b[31m"
+    # define GREEN "\x1b[32m"
+    # define YELLOW "\x1b[33m"
+    # define BLUE "\x1b[34m"
+    # define MAGENTA "\x1b[35m"
+    # define CYAN "\x1b[36m"
+    # define RESET "\x1b[39m"
+
+	${0:TARGET}
 
 	int	main(int argc, char **argv)
     {
-		${0:TARGET}
-		return (0);
-	}
-
-snippet    setlibc
-abbr       include libc and main
-    #include <libc.h>
-
-	int	main(void)
-    {
-		${0:TARGET}
+        ;
 		return (0);
 	}
 
@@ -217,13 +224,15 @@ abbr       Pipe with If
         exit(EXIT_FAILURE);
     }
 
-snippet    success 
-abbr       Success Macro
-    EXIT_SUCCESS
+snippet    ret_success 
+abbr       return 0
+alias      res
+    return EXIT_SUCCESS;
 
-snippet    failure 
-abbr       Failure Macro
-    EXIT_FAILURE
+snippet    ret_failure
+abbr       return 1
+alias      ref
+    return EXIT_FAILURE;
 
 snippet     exits
 abbr       Exit with SUCCESS

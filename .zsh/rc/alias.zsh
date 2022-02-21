@@ -1,10 +1,12 @@
 #Alias_Temporary
-alias go="cd ~/project/cpp/06"
+alias go="cd ~/project/cpp/08"
 
 #Alias
 alias ls="exa"
-alias la="ls -la"
-alias ll="ls -lh"
+alias la="exa -la"
+alias ll="exa -lhr -sold"
+alias lt="exa -TL"
+alias lta="exa -aTL"
 alias cat="bat"
 alias ctags="/Users/hyoshie/.brew/Cellar/ctags/5.8_2/bin/ctags"
 alias cp="cp -iv"
