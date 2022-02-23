@@ -2,3 +2,4 @@
 coplien-form-generator
 .zsh/zsh-autosuggestions
 .config/Code
+.config/nvim/dein.toml
