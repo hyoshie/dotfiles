@@ -33,6 +33,10 @@ snippet     printf
 abbr        my_printf
     printf("${1}\n"${2});${0}
 
+snippet     psp
+abbr        my_printf with specifier
+    printf("[${1}]%${2}\n",$1);${0}
+
 snippet     pd
 abbr        my_printf %d
     printf("[${1}]%d\n", $1);${0}
@@ -44,6 +48,10 @@ abbr        my_printf %s
 snippet     pz
 abbr        my_printf %zu
     printf("[${1}]%zu\n", $1);${0}
+
+snippet     pp
+abbr        my_printf %p
+    printf("[${1}]%p\n", $1);${0}
 
 snippet     fline
 abbr        print filename and line
@@ -123,7 +131,7 @@ abbr       my fork
 snippet    cmain
 alias      cm
 abbr       include and main(args)
-    #include <libc.h>
+    #include <stdio.h>
 	${1}
 
     //Color
@@ -137,7 +145,7 @@ abbr       include and main(args)
 
 	${0:TARGET}
 
-	int	main(int argc, char **argv)
+	int	main(void)
     {
         ;
 		return (0);

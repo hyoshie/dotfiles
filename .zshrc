@@ -3,6 +3,7 @@
 
 export ZSHRC="$HOME/dotfiles/.zsh/rc"
 export DOTFILE="$HOME/dotfiles"
+export CDPATH=$HOME:$HOME/42tokyo/:$DOTFILE
 
 source $ZSHRC/alias.zsh
 source $ZSHRC/brewconfig.zsh
@@ -28,3 +29,4 @@ export MAIL=hyoshie@student.42tokyo.jp
 
 #Append path
 export MANPATH="$HOME/.brew/Cellar/readline/8.1.1/share/man":
+export PATH="/home/linuxbrew/.linuxbrew/opt/clang-format/bin:$PATH"

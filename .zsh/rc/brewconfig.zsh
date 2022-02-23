@@ -21,6 +21,7 @@ export HOGE=hoge42tokyo
 mkdir -p $HOMEBREW_CACHE
 mkdir -p $HOMEBREW_TEMP
 
+if [ $(uname) = "Darwin" ]; then
 # If NFS session
 # Symlink Locks folder in /tmp
 if df -T autofs,nfs $HOME 1>/dev/null
@@ -39,4 +40,5 @@ then
      rm -rf $HOMEBREW_LOCKS_FOLDER
      ln -s $HOMEBREW_LOCKS_TARGET $HOMEBREW_LOCKS_FOLDER
   fi
+fi
 fi
