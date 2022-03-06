@@ -1,9 +1,13 @@
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+#Append path
 export ZSHRC="$HOME/dotfiles/.zsh/rc"
 export DOTFILE="$HOME/dotfiles"
 export CDPATH=$HOME:$HOME/42tokyo/:$DOTFILE
+export MANPATH="$HOME/.brew/Cellar/readline/8.1.1/share/man":
+export PATH="/home/linuxbrew/.linuxbrew/opt/clang-format/bin:$PATH"
+export MANPATH="/home/user42/42tokyo/cub3d/tutorial/minilibx/minilibx-linux/man:$MANPATH:"
 
 source $ZSHRC/alias.zsh
 source $ZSHRC/brewconfig.zsh
@@ -27,6 +31,3 @@ export PATH="/Users/hyoshie/.brew/opt/llvm/bin:$PATH"
 
 export MAIL=hyoshie@student.42tokyo.jp
 
-#Append path
-export MANPATH="$HOME/.brew/Cellar/readline/8.1.1/share/man":
-export PATH="/home/linuxbrew/.linuxbrew/opt/clang-format/bin:$PATH"
