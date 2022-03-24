@@ -1,0 +1,113 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "editor.fontLigatures": false,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/home/user42/.vimrc",
+    "editor.fontFamily": "Myrica M,  'monospace', monospace, 'Droid Sans Fallback', 'Droid Sans Mono'",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        // "<C-a>": false,
+        // "<C-f>": false,
+        // "<C-n>": false,
+        // "<C-c>": false,
+        // "<C-x>": false,
+        // "<C-v>": false,
+        // "<C-b>": false,
+        // "<C-j>": false,
+        "<C-k>": true,
+        "<C-p>": true
+    },
+    // "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": [ "<leader>", "g", "d" ], "commands": [ "editor.action.gototypedefinition" ] },
+        { "before": [ "g", "f" ], "commands": [ "editor.action.referenceSearch.trigger" ] },
+        { "before": [ "s" ], "after": [ "<leader>", "<leader>", "2","s" ] },
+        // ファイル保存
+        { "before": [ "<leader>", "w" ], "commands": [ ":w" ] },
+        // サイドバーの開閉
+        { "before": ["<leader>", "b" ], "commands": [ "workbench.action.toggleSidebarVisibility" ] },
+        // クイックオープンを開く
+        { "before": [ "<leader>", "p" ], "commands": [ "workbench.action.quickOpen" ] },
+        { "before": [ "<leader>", "t" ], "commands": [ "workbench.action.showAllSymbols" ] },
+        // ファイルエクスプローラーを選択
+        { "before": [ "<leader>", "e" ], "commands": [ "workbench.view.explorer" ] },
+        // 変数の型定義を参照
+        { "before": [ "<leader>", "g", "d" ], "commands": [ "editor.action.goToTypeDefinition" ] },
+        // 変数の参照箇所の表示
+        { "before": [ "g", "f" ], "commands": [ "editor.action.referenceSearch.trigger" ] },
+        // 現在のタブを閉じる
+        { "before": [ "<leader>", "q" ], "commands": [ ":q" ] },
+        // 現在のタブを保存せず閉じる
+        { "before": [ "<leader>", "!" ], "commands": [ ":q!" ] },
+        // 現在のタブ以外すべてを閉じる
+        { "before": [ "<leader>", "<leader>", "q" ], "commands": [ ":tabo" ] },
+        // 前のタブを表示
+        { "before": ["<leader>", "S-j"], "after": [ "S-j" ] },
+        { "before": ["S-j"], "commands": [ "workbench.action.previousEditor" ] },
+        // 次のタブを表示
+        { "before": ["S-k"], "commands": [ "workbench.action.nextEditor" ] },
+        // コメントアウト
+        { "before": [ "<leader>", "c" ], "commands": [ "editor.action.commentLine" ] },
+        // 対応する括弧に移動
+        { "before": [ "<leader>", "m" ], "after": [ "%" ] },
+        // 検索のハイライトを消去
+        { "before": [ "<leader>", "z" ], "commands": [ ":noh" ] },
+        { "before": [ "<leader>", "f" ], "commands": [ "findThenJump.initiate" ] },
+        //　検索で移動するときに中央表示
+        { "before": [ "n" ], "after": [ "n", "z", "z" ] },
+        { "before": [ "N" ], "after": [ "N", "z", "z" ] },
+        //　行頭・行末に移動
+        { "before": [ "C-h" ], "after": [ "^" ] },
+        { "before": [ "C-l" ], "after": [ "$" ] },
+        //　対応するかっこに移動
+        { "before": [ "<leader>", "m" ], "after": [ "%" ] },
+        // keybinding json 
+        { "before": [ "<leader>", "<leader>", "k" ], "commands": [ "workbench.action.openGlobalKeybindingsFile" ] },
+        // setting json 
+        { "before": [ "<leader>", "<leader>", "j" ], "commands": [ "workbench.action.openSettingsJson" ] },
+        { "before": [ "Enter" ], "after": [ "o", "<ESC>" ] },
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        { "before": [ "C-n" ], "commands": [ "colonize.newline" ] },
+        // { "before": [ "C-j" ], "after": [ "Enter" ] },
+        {
+            "before": ["<C-p>"],
+            "after": ["<Up>"]
+        },
+    ],
+    "vim.insertModeKeyBindings": [
+        { "before": [ "C-n" ], "commands": [ "colonize.newline" ] },
+        // { "before": [ "C-j" ], "after": [ "Enter" ] },
+        {
+            "before": ["<C-b>"],
+            "after": ["<Up>"]
+        },
+    ],
+    "vim.hlsearch": true, // 検索マッチ箇所をハイライト
+    "vim.surround": true,
+    "vim.leader": "<space>", // leaderキーを設定
+    "vim.easymotion": true,
+    "vim.easymotionKeys": "asdfghjklwertuiop", // easymotionの候補キーを設定
+    "vim.easymotionMarkerBackgroundColor": "rgba(0, 0, 0, 0.7)",
+    "vim.easymotionMarkerForegroundColorOneChar": "yellow",
+    // "vim.sneak": true,
+    "vim.visualstar": true,
+    "vim.foldfix": true,
+    "terminal.integrated.rendererType": "dom",
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": false,
+    "editor.insertSpaces": false,
+    "42header.username": "hyoshie",
+    "42header.email": "hyoshie@student.42tokyo.jp",
+    "files.insertFinalNewline": true,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "workbench.panel.defaultLocation": "right",
+    // "C_Cpp.updateChannel": "Insiders",
+}
