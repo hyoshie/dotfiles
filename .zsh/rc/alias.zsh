@@ -1,5 +1,5 @@
 #Alias_Temporary
-alias go="cd ~/42tokyo/cub3D"
+alias go="cd ~/prog/html/hcv2_download"
 
 #Alias
 alias ls="exa"
