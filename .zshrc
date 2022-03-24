@@ -7,7 +7,7 @@ export DOTFILE="$HOME/dotfiles"
 export CDPATH=$HOME:$HOME/42tokyo/:$DOTFILE
 export MANPATH="$HOME/.brew/Cellar/readline/8.1.1/share/man":
 export PATH="/home/linuxbrew/.linuxbrew/opt/clang-format/bin:$PATH"
-export MANPATH="/home/user42/42tokyo/cub3d/tutorial/minilibx/minilibx-linux/man:$MANPATH:"
+export MANPATH="/home/user42/42tokyo/cub3D/lib/minilibx-linux/man:$MANPATH:"
 
 source $ZSHRC/alias.zsh
 source $ZSHRC/brewconfig.zsh
