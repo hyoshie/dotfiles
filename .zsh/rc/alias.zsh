@@ -1,9 +1,5 @@
 #Alias_Temporary
-<<<<<<< HEAD
 alias go="cd ~/project/hotrace"
-=======
-alias go="cd ~/prog/html/hcv2_download"
->>>>>>> 1774c12fc53456c3ac176222e7bf066560fc42c9
 
 #Alias
 alias ls="exa"
