@@ -61,5 +61,3 @@ alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tk='tmux kill-session -t'
 alias u='cd ..'
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

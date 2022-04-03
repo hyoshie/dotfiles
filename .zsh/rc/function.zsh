@@ -76,6 +76,14 @@ function gensh() {
 }
 
 function cprev() {
-	cp -r ~/review/utils/$1 mytest
+	mkdir mytest
+	utilsdir=$HOME/review/utils/$1
+	for file in $(ls ~/review/utils/$1); do
+		ln -s $utilsdir/$file mytest/$file
+	done
+	# cp -r ~/review/utils/$1 mytest
 }
 
+# function cprev() {
+# 	cp -r ~/review/utils/$1 mytest
+# }

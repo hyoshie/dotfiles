@@ -1,5 +1,5 @@
 #Alias_Temporary
-alias go="cd ~/project/cpp/08"
+alias go="cd ~/project/hotrace"
 
 #Alias
 alias ls="exa"
