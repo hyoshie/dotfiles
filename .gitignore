@@ -3,3 +3,7 @@ coplien-form-generator
 .zsh/zsh-autosuggestions
 .config/Code
 .config/nvim/dein.toml
+.config/google-chrome
+.config/mimeapps.list
+.config/pulse
+.config/xfce4

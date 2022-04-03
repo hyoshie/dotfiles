@@ -1,6 +1,7 @@
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+#Append path
 export ZSHRC="$HOME/dotfiles/.zsh/rc"
 export DOTFILE="$HOME/dotfiles"
 
