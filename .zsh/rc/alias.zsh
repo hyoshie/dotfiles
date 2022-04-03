@@ -1,5 +1,9 @@
 #Alias_Temporary
+<<<<<<< HEAD
 alias go="cd ~/project/hotrace"
+=======
+alias go="cd ~/prog/html/hcv2_download"
+>>>>>>> 1774c12fc53456c3ac176222e7bf066560fc42c9
 
 #Alias
 alias ls="exa"
@@ -8,7 +12,7 @@ alias ll="exa -lhr -sold"
 alias lt="exa -TL"
 alias lta="exa -aTL"
 alias cat="bat"
-alias ctags="/Users/hyoshie/.brew/Cellar/ctags/5.8_2/bin/ctags"
+# alias ctags="/Users/hyoshie/.brew/Cellar/ctags/5.8_2/bin/ctags"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
@@ -73,6 +77,8 @@ alias ta="tmux attach -t"
 alias tls="tmux ls"
 alias tk="tmux kill-session -t"
 alias u="cd .."
+alias uu="cd ../.."
+alias b="cd -"
 
 #Global alias
 alias -g G="| grep"
