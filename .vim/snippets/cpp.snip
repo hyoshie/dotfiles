@@ -41,13 +41,13 @@ snippet     header with canonical form
 alias       canh
 abbr        orthodox canonical form header
     class ${1:CLASS_NAME} {
-        private:
-                ${0}
         public:
             $1();
             ~$1();
             $1(const $1& other);
             $1& operator=(const $1& other);
+        private:
+                ${0}
     };
 
 snippet     source with canonical form
@@ -209,3 +209,6 @@ alias       test
         std::cout << msg << std::endl;
         ${0}
     }
+
+snippet     passp
+    std::cerr << "[\x1b[32mPASS\x1b[39m]"<<std::endl;

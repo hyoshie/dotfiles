@@ -1,6 +1,6 @@
 "dein Scripts-----------------------------
 if &compatible
-	  set nocompatible               " Be iMproved
+	set nocompatible               " Be iMproved
 endif
 
 "Path to DIR
@@ -11,6 +11,10 @@ let s:toml_dir = expand('~/dotfiles/.config/nvim')
 " let s:dein_dir = expand('~/.vim/dein')
 " let s:dein_repo_dir = s:dein_dir .  '/repos/github.com/Shougo/dein.vim'
 " let s:toml_dir = expand('~/.config/nvim')
+let g:python3_dir = '/home/linuxbrew/.linuxbrew/bin/'
+let g:python3_host_prog = g:python3_dir . 'python3'
+" let g:python3_dir = '/usr/bin/'
+" let g:python3_host_prog = g:python3_dir . 'python3'
 
 " Required:
 execute 'set runtimepath^=' . s:dein_repo_dir
@@ -44,16 +48,16 @@ endif
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
 	highlight = {
-	enable = true,
-	disable = {
-		'lua',
-		'ruby',
-		'toml',
-		'c_sharp',
-		'vue',
+		enable = true,
+		disable = {
+			'lua',
+			'ruby',
+			'toml',
+			'c_sharp',
+			'vue',
+			}
 		}
 	}
-}
 EOF
 
 "ADD .vimPATH
@@ -166,8 +170,8 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 
 "vim-fugitive
-nnoremap <Leader>gc :Gread<CR>
-nnoremap <Leader>gd :Gdiff<CR>
+" nnoremap <Leader>gc :Gread<CR>
+" nnoremap <Leader>gd :Gdiff<CR>
 nnoremap gj <C-w>h
 nnoremap gk <C-w>w
 nnoremap gx <C-w>x
@@ -191,27 +195,27 @@ set splitright
 
 "Anywhere SID.
 function! s:SID_PREFIX()
-  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
+	return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
 
 " Set tabline.
 function! s:my_tabline()  "{{{
-  let s = ''
-  for i in range(1, tabpagenr('$'))
-    let bufnrs = tabpagebuflist(i)
-    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
-    let no = i  " display 0-origin tabpagenr.
-    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
-    let title = fnamemodify(bufname(bufnr), ':t')
-    let title = '[' . title . ']'
-    let s .= '%'.i.'T'
-    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
-    let s .= no . ':' . title
-    let s .= mod
-    let s .= '%#TabLineFill# '
-  endfor
-  let s .= '%#TabLineFill#%T%=%#TabLine#'
-  return s
+	let s = ''
+	for i in range(1, tabpagenr('$'))
+		let bufnrs = tabpagebuflist(i)
+		let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
+		let no = i  " display 0-origin tabpagenr.
+		let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+		let title = fnamemodify(bufname(bufnr), ':t')
+		let title = '[' . title . ']'
+		let s .= '%'.i.'T'
+		let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+		let s .= no . ':' . title
+		let s .= mod
+		let s .= '%#TabLineFill# '
+	endfor
+	let s .= '%#TabLineFill#%T%=%#TabLine#'
+	return s
 endfunction "}}}
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 set showtabline=2 " 常にタブラインを表示
@@ -221,7 +225,7 @@ nnoremap    [Tag]   <Nop>
 nmap    t [Tag]
 " Tab jump
 for n in range(1, 9)
-  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+	execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
 endfor
 " t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
 
@@ -241,17 +245,17 @@ autocmd FileType c,cpp setlocal commentstring=//\ %s
 
 "template
 augroup templateGroup
-autocmd!
-autocmd BufNewFile *.h :Headerguard
-autocmd BufNewFile *.h :Stdheader
-autocmd BufNewFile *.h :%s/define/ define/g
-autocmd BufNewFile *.h :r !echo
-" autocmd BufNewFile *.h :r !proto *.c
+	autocmd!
+	autocmd BufNewFile *.h :Headerguard
+	autocmd BufNewFile *.h :Stdheader
+	autocmd BufNewFile *.h :%s/define/ define/g
+	autocmd BufNewFile *.h :r !echo
+	" autocmd BufNewFile *.h :r !proto *.c
 augroup END
 
 aug space
 	au!
-		autocmd BufWritePre *.c,*.cpp,*.h,*.hpp :%s/\s\+$//e
+	autocmd BufWritePre *.c,*.cpp,*.h,*.hpp :%s/\s\+$//e
 aug END
 
 " aug spacetotab
@@ -270,23 +274,29 @@ endfunction
 autocmd QuickfixCmdPost vimgrep call OpenModifiableQF()
 
 augroup fileTypeIndent
-    autocmd!
-    autocmd BufNewFile,BufRead *.cpp,*.hpp setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+	autocmd!
+	autocmd BufNewFile,BufRead *.cpp,*.hpp setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup END
 
 
 function! s:clang_format()
-  let now_line = line(".")
-  exec ":%! clang-format"
-  exec ":" . now_line
+	let now_line = line(".")
+	exec ":%! clang-format"
+	exec ":" . now_line
 endfunction
 
 if executable('clang-format')
-  augroup cpp_clang_format
-    autocmd!
-    autocmd BufWrite,FileWritePre,FileAppendPre *.[ch]pp call s:clang_format()
-    " autocmd BufWrite,FileWritePre,FileAppendPre *.c,*.h call s:clang_format()
-  augroup END
+	augroup cpp_clang_format
+		autocmd!
+		autocmd bufwrite,filewritepre,fileappendpre *.[ch]pp call s:clang_format()
+		" autocmd bufwrite,filewritepre,fileappendpre *.c,*.h call s:clang_format()
+	augroup END
 endif
 
 set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
+set guifont=DroidSansMono\ Nerd\ Font\ 11
+
+" nnoremap <C-h> :Gtags -f %<CR>
+" nnoremap <C-j> :GtagsCursor<CR>
+nnoremap <C-n> :cn<CR>
+nnoremap <C-p> :cp<CR>

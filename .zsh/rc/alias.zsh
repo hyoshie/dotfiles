@@ -1,9 +1,6 @@
-#Alias_Temporary
-alias go="cd ~/prog/html/hcv2_download"
-
 #Alias
-alias ls="exa"
-alias la="exa -la"
+alias ls="exa --icons"
+alias la="ls -la"
 alias ll="exa -lhr -sold"
 alias lt="exa -TL"
 alias lta="exa -aTL"
@@ -56,6 +53,7 @@ alias gm="git merge"
 alias gnb="git checkout -b"
 alias gp="git push"
 alias gs="git status"
+alias gsw="git switch"
 alias h="cd"
 alias l="exa"
 alias m="make && clear"
