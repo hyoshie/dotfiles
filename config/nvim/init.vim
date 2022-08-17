@@ -7,7 +7,7 @@ endif
 let s:dein_dir = expand('~/dotfiles/.vim/dein')
 " let s:dein_dir = expand('~/dotfiles/dein')
 let s:dein_repo_dir = s:dein_dir .  '/repos/github.com/Shougo/dein.vim'
-let s:toml_dir = expand('~/dotfiles/.config/nvim')
+let s:toml_dir = expand('~/dotfiles/config/nvim')
 " let s:dein_dir = expand('~/.vim/dein')
 " let s:dein_repo_dir = s:dein_dir .  '/repos/github.com/Shougo/dein.vim'
 " let s:toml_dir = expand('~/.config/nvim')

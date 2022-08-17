@@ -2,17 +2,17 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #Append path
-export ZSHRC="$HOME/dotfiles/.zsh/rc"
 export DOTFILE="$HOME/dotfiles"
+export ZSH_SCRIPT_DIR="$DOTFILE/zsh/rc"
 
-source $ZSHRC/alias.zsh
-source $ZSHRC/brewconfig.zsh
-source $ZSHRC/completion.zsh
-source $ZSHRC/config.zsh
-source $ZSHRC/env.zsh
-source $ZSHRC/function.zsh
-source $ZSHRC/plugin.zsh
-source $ZSHRC/prompt.zsh
+source $ZSH_SCRIPT_DIR/env.zsh
+source $ZSH_SCRIPT_DIR/alias.zsh
+source $ZSH_SCRIPT_DIR/brewconfig.zsh
+source $ZSH_SCRIPT_DIR/completion.zsh
+source $ZSH_SCRIPT_DIR/config.zsh
+source $ZSH_SCRIPT_DIR/function.zsh
+source $ZSH_SCRIPT_DIR/plugin.zsh
+source $ZSH_SCRIPT_DIR/prompt.zsh
 
 # Add serch path
 export PATH=$DOTFILE/.bin:$PATH
@@ -20,7 +20,7 @@ export PATH=$DOTFILE/.bin:$PATH
 
 #neovim
 # export XDG_CONFIG_HOME=~/.config
-export XDG_CONFIG_HOME=$DOTFILE/.config
+export XDG_CONFIG_HOME=$DOTFILE/config
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export PATH="/Users/hyoshie/.brew/opt/llvm/bin:$PATH"

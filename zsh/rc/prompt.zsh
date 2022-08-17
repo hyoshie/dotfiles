@@ -4,7 +4,7 @@ colors
 setopt prompt_subst
 
 # Git status
-source $DOTFILE/.zsh/git-prompt.sh
+source $DOTFILE/zsh/git-prompt.sh
 
 # プロンプトのオプション表示設定
 GIT_PS1_SHOWDIRTYSTATE=true
