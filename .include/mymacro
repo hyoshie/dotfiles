@@ -1,7 +1,6 @@
 #ifndef DEFINE_H
 # define DEFINE_H
 
-#define VALUE(a) std::cout << #a << ": " << a << std::endl;
-#define PRINT(string) std::cout << string  << std::endl;
+#define PRINT(a) std::cout << #a << ": " << a << std::endl;
 
 #endif /* DEFINE_H */
